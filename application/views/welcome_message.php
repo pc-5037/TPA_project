@@ -29,6 +29,7 @@
 				margin-bottom: -10000px;
 				float: left;
 				width: 100%;
+                                height: 100%;
 			}
 			
 			#nav {
@@ -116,16 +117,18 @@
 			
 			<nav id="nav">
 				<div class="innertube">
-					<h3>Admin</h3>
-                                        <?php 
-    			if($_SESSION['SESSION_NAME']=='admin'){?>
+<!--					<h3>Admin</h3>-->
+                                        <?php if($_SESSION['SESSION_NAME']=='admin' || $_SESSION['SESSION_NAME']=='ticket_seller'){?>
 					<ul>
 						<li><a href="#">Register a guest</a></li>
 						<li><a href="#">view guest info</a></li>
-						<li><a href="#">delete guest info</a></li>
-						<li><a href="#">view attractions info</a></li>
                                                 <?php }?>
-						<li><a href="#">Link 5</a></li>
+                                                <?php if($_SESSION['SESSION_NAME']=='admin'){?>
+						<li><?php echo anchor('show_attraction', 'View Attractions Info'); ?></li>
+                                                <li><?php echo anchor('add_attraction', 'Add Attraction'); ?></li>
+                                                <?php }?>
+						<li><a href="#">Attraction Package</a></li>
+                                                <li><a href="#">Pass management</a></li>
 					</ul>
 				</div>
 			</nav>

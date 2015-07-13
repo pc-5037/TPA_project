@@ -3,7 +3,9 @@ class Attraction extends CI_Model{
     
     public $id;
     public $name;
-    
+    public $descp;
+
+
     public function __construct() {
         parent::__construct();
     }
@@ -11,8 +13,7 @@ class Attraction extends CI_Model{
         $query = $this->db->get('attraction');
         return $query->result();
     }
-    public function getAttraction($id){
-        $this->db->where('aid', $id);
-         return $query->result();
+    public function insertAttr($data) {
+        $this->db->insert('attraction', $data);
     }
 }
