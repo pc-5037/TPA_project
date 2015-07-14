@@ -26,7 +26,8 @@
                <?php echo $attraction->description; ?>
                 </td>
                 <td>
-               <?php echo anchor('edit_attraction/edit/'.$attraction->aid.'', 'edit'); ?>
+               <a href="<?php echo base_url() . "index.php/edit_attraction/show_detail_form/" . $attraction->aid; ?>">
+                <button>Edit</button></a>
 <!--                    anchor to edit ctrl-->
                 </td>
                 <td>

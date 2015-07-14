@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <!-- Template by quackit.com -->
- $this->load->library('session');
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">

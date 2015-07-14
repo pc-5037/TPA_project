@@ -4,20 +4,18 @@
 </head>
 <body>
 
-<?php echo validation_errors(); ?>
-
-<?php echo form_open('edit_attraction'); ?>
-<?php if (isset($message)) { ?>
-<CENTER><h3 style="color:green;">Edit successfully</h3></CENTER><br>
-<?php } ?>
-<?php echo form_label('Attraction Name :'); ?> <?php echo form_error('name'); ?><br />
-<?php echo form_input(array('id' => 'dname', 'name' => 'dname')); ?><br />
-
-<?php echo form_label('Description :'); ?> <?php echo form_error('demail'); ?><br />
-<?php echo form_input(array('id' => 'desc', 'name' => 'desc')); ?><br />
-
-<?php echo form_submit(array('id' => 'submit', 'value' => 'Submit')); ?>
-<?php echo form_close(); ?><br/>
+<?php foreach ($an_attraction as $attraction): ?>
+<p>Edit Detail & Click Update Button</p>
+<form method="post" action="<?php echo base_url() . "index.php/edit_attraction/edit"?>">
+<label id="hide">Id :</label>
+<input type="text" id="hide" name="did" value="<?php echo $attraction->aid; ?>" readonly="readonly"><br>
+<label>Name :</label>
+<input type="text" name="dname" value="<?php echo $attraction->aname; ?>"><br>
+<label>Description :</label>
+<input type="text" name="desc" value="<?php echo $attraction->description; ?>"><br>
+<input type="submit" id="submit" name="dsubmit" value="Update">
+</form>
+<?php endforeach; ?>
 
 </body>
 </html>
