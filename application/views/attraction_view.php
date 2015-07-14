@@ -14,23 +14,24 @@
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
-        <?php foreach ($attraction_list as $row):?>
+        <?php foreach ($attraction_list as $attraction):?>
             <tr>
                 <td>
-               <?php echo $row->aid;?>
+               <?php echo $attraction->aid;?>
                 </td>
                 <td>
-               <?php echo $row->aname;?>
+               <?php echo $attraction->aname;?>
                 </td>
                 <td>
-               <?php echo $row->description; ?>
+               <?php echo $attraction->description; ?>
                 </td>
                 <td>
-               <button onclick="location.href='<?php echo base_url();?>register/index'">edit</button>
+               <?php echo anchor('edit_attraction/edit/'.$attraction->aid.'', 'edit'); ?>
 <!--                    anchor to edit ctrl-->
                 </td>
                 <td>
-               <button onclick="location.href='<?php echo base_url();?>register/index'">delete</button>
+                <a href="<?php echo base_url() . "index.php/delete_attraction/delete/" . $attraction->aid; ?>">
+                <button>Delete</button></a>
 <!--                    anchor to delete ctrl -->
                 </td>
                 </tr>

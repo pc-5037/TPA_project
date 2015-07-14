@@ -6,9 +6,9 @@
 
 <?php echo validation_errors(); ?>
 
-<?php echo form_open('add_attraction'); ?>
+<?php echo form_open('edit_attraction'); ?>
 <?php if (isset($message)) { ?>
-<CENTER><h3 style="color:green;">Add successfully</h3></CENTER><br>
+<CENTER><h3 style="color:green;">Edit successfully</h3></CENTER><br>
 <?php } ?>
 <?php echo form_label('Attraction Name :'); ?> <?php echo form_error('name'); ?><br />
 <?php echo form_input(array('id' => 'dname', 'name' => 'dname')); ?><br />
@@ -21,4 +21,3 @@
 
 </body>
 </html>
-
