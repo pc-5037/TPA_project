@@ -16,7 +16,8 @@ class edit_attraction extends CI_Controller{
     $id= $this->input->post('did');
     $data = array(
             'aname' => $this->input->post('dname'),
-            'description' => $this->input->post('desc')
+            'description' => $this->input->post('desc'),
+            'height_limit' => $this->input->post('hlimit')
         );
     $this->attraction->editAttraction($id,$data);
     redirect('/show_attraction');

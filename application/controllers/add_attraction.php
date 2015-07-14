@@ -14,8 +14,9 @@ class add_attraction extends CI_Controller{
         //Validating Name Field
         $this->form_validation->set_rules('dname', 'name', 'required|min_length[5]|max_length[30]');
 
-
         $this->form_validation->set_rules('desc', 'description', 'required|min_length[5]|max_length[300]');
+        
+        $this->form_validation->set_rules('hlimit','height limit','required|numeric');
 
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('attraction_form');
@@ -24,6 +25,7 @@ class add_attraction extends CI_Controller{
         $data = array(
         'aname' => $this->input->post('dname'),
         'description' => $this->input->post('desc'),
+        'height_limit' => $this->input->post('hlimit')
             );
         //Transfering data to Model
         $this->attraction->insertAttraction($data);

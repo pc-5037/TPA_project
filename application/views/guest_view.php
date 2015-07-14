@@ -3,39 +3,39 @@
         <title>TPA</title>
 </head>
 <body>
-        <h1>View all attractions</h1>
+        <h1>View all guests</h1>
 
-        <h3>Attraction List</h3>
+        <h3>Guest List</h3>
         <table>
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Description</th>
-                <th>Height Limit</th>
+                <th>E-mail</th>
+                <th>Tel.</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
-        <?php foreach ($attraction_list as $attraction):?>
+        <?php foreach ($guest_list as $guest):?>
             <tr>
                 <td>
-               <?php echo $attraction->aid;?>
+               <?php echo $guest->gid;?>
                 </td>
                 <td>
-               <?php echo $attraction->aname;?>
+               <?php echo $guest->gname;?>
                 </td>
                 <td>
-               <?php echo $attraction->description; ?>
+               <?php echo $guest->gmail; ?>
                 </td>
                  <td>
-               <?php echo $attraction->height_limit; ?>
+               <?php echo $guest->gtel; ?>
                 </td>
                 <td>
-               <a href="<?php echo base_url() . "index.php/edit_attraction/show_detail_form/" . $attraction->aid; ?>">
+               <a href="<?php echo base_url() . "index.php/edit_attraction/show_detail_form/" . $guest->gid; ?>">
                 <button>Edit</button></a>
 <!--                    anchor to edit ctrl-->
                 </td>
                 <td>
-                <a href="<?php echo base_url() . "index.php/delete_attraction/delete/" . $attraction->aid; ?>">
+                <a href="<?php echo base_url() . "index.php/delete_attraction/delete/" . $guest->gid; ?>">
                 <button>Delete</button></a>
 <!--                    anchor to delete ctrl -->
                 </td>

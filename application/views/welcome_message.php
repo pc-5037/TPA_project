@@ -119,8 +119,8 @@
 <!--					<h3>Admin</h3>-->
                                         <?php if($_SESSION['SESSION_NAME']=='admin' || $_SESSION['SESSION_NAME']=='ticket_seller'){?>
 					<ul>
-						<li><a href="#">Register a guest</a></li>
-						<li><a href="#">view guest info</a></li>
+						<li><?php echo anchor('add_guest', 'Register Guest'); ?></li>
+						<li><?php echo anchor('show_guest', 'View Guests Info'); ?></li>
                                                 <?php }?>
                                                 <?php if($_SESSION['SESSION_NAME']=='admin'){?>
 						<li><?php echo anchor('show_attraction', 'View Attractions Info'); ?></li>

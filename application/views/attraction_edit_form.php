@@ -13,6 +13,8 @@
 <input type="text" name="dname" value="<?php echo $attraction->aname; ?>"><br>
 <label>Description :</label>
 <input type="text" name="desc" value="<?php echo $attraction->description; ?>"><br>
+<label>Height Limit :</label>
+<input type="number" name="hlimit" value="<?php echo $attraction->height_limit; ?>"><br>
 <input type="submit" id="submit" name="dsubmit" value="Update">
 </form>
 <?php endforeach; ?>
