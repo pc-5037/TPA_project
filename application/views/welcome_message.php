@@ -116,7 +116,7 @@
 			
 			<nav id="nav">
 				<div class="innertube">
-<!--					<h3>Admin</h3>-->
+
                                         <?php if($_SESSION['SESSION_NAME']=='admin' || $_SESSION['SESSION_NAME']=='ticket_seller'){?>
 					<ul>
 						<li><?php echo anchor('add_guest', 'Register Guest'); ?></li>

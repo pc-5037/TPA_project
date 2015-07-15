@@ -35,7 +35,7 @@
 <!--                    anchor to edit ctrl-->
                 </td>
                 <td>
-                <a href="<?php echo base_url() . "index.php/delete_attraction/delete/" . $guest->gid; ?>">
+                <a href="<?php echo base_url() . "index.php/delete_guest/delete/" . $guest->gid; ?>">
                 <button>Delete</button></a>
 <!--                    anchor to delete ctrl -->
                 </td>
