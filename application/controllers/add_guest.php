@@ -4,6 +4,7 @@ class add_guest extends CI_Controller{
     function __construct() {
         parent::__construct();
         $this->load->model('guest');
+        $this->load->model('registerdata');
     }
     function index() {
         //Including validation library
@@ -12,21 +13,22 @@ class add_guest extends CI_Controller{
         $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 
         //Validating Name Field
-        $this->form_validation->set_rules('dname', 'Username', 'required|min_length[5]|max_length[15]');
+        $this->form_validation->set_rules('gname', 'Username', 'required|min_length[5]|max_length[15]');
 
         //Validating Email Field
-        $this->form_validation->set_rules('demail', 'Email', 'required|valid_email');
+        $this->form_validation->set_rules('gemail', 'Email', 'required|valid_email');
 
         //Validating Mobile no. Field
-        $this->form_validation->set_rules('dmobile', 'Mobile No.', 'required|regex_match[/^[0-9]{10}$/]');
-
-
+        $this->form_validation->set_rules('gmobile', 'Mobile No.', 'required|numeric');
+        $result['data'] = $this->registerdata->getLastInserted();
+//'required|regex_match[/^[0-9]{10}$/]'
         if ($this->form_validation->run() == FALSE) {
-            $this->load->view('guest_form');
+            $this->load->view('guest_form',$result);
         } else {
             //Setting values for tabel columns
             $data = array(
-                'game' => $this->input->post('gname'),
+                'guid' => $this->registerdata->getLastInserted()->uid,
+                'gname' => $this->input->post('gname'),
                 'gmail' => $this->input->post('gemail'),
                 'gtel' => $this->input->post('gmobile')
             );

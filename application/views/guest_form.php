@@ -1,5 +1,12 @@
-<?php echo form_open('insert_ctrl'); ?>
+<?php echo form_open('add_guest'); ?>
 <h1>Register Guest</h1><hr/>
+
+<?php foreach ($data as $v): ?>
+  <tr>
+    <td><?php echo $v['uid']?></td>
+  </tr>
+<?php endforeach; ?>
+
 <?php if (isset($message)) { ?>
 <CENTER><h3 style="color:green;">Data inserted successfully</h3></CENTER><br>
 <?php } ?>

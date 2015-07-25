@@ -3,15 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/TPA/application/controllers/delete_guest.php</file>
+            <file>file:/C:/xampp/htdocs/TPA/application/controllers/welcome.php</file>
             <file>file:/C:/xampp/htdocs/TPA/application/views/welcome_message.php</file>
-            <file>file:/C:/xampp/htdocs/TPA/application/controllers/show_guest.php</file>
-            <file>file:/C:/xampp/htdocs/TPA/application/views/guest_form.php</file>
-            <file>file:/C:/xampp/htdocs/TPA/application/controllers/add_guest.php</file>
-            <file>file:/C:/xampp/htdocs/TPA/application/views/guest_view.php</file>
+            <file>file:/C:/xampp/htdocs/TPA/application/controllers/select_role.php</file>
             <file>file:/C:/xampp/htdocs/TPA/application/views/attraction_view.php</file>
-            <file>file:/C:/xampp/htdocs/TPA/application/controllers/add_attraction.php</file>
-            <file>file:/C:/xampp/htdocs/TPA/application/models/Guest.php</file>
+            <file>file:/C:/xampp/htdocs/TPA/application/views/role_view.php</file>
         </group>
     </open-files>
 </project-private>

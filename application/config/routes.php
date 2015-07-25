@@ -52,3 +52,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'select_role';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['adduid/(:any)'] = 'post_uid/postuid/$1';

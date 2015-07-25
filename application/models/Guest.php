@@ -33,4 +33,5 @@ class Guest extends CI_Model{
         $this->db->where('gid', $id);
         $this->db->delete('guest');
     }
+
 }
