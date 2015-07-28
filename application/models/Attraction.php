@@ -1,10 +1,5 @@
 <?php
 class Attraction extends CI_Model{
-    
-    public $id;
-    public $name;
-    public $descp;
-
 
     public function __construct() {
         parent::__construct();
@@ -15,10 +10,10 @@ class Attraction extends CI_Model{
         return $query->result();
     }
     
-    public function getAttraction($data){
+    public function getAttraction($id){
         $this->db->select('*');
         $this->db->from('attraction');
-        $this->db->where('aid', $data);
+        $this->db->where('aid', $id);
         $query = $this->db->get();
         $result = $query->result();
         return $result;
@@ -28,12 +23,12 @@ class Attraction extends CI_Model{
         $this->db->insert('attraction', $data);
     }
     
-    function editAttraction($id,$data){
+    public function editAttraction($id,$data){
         $this->db->where('aid', $id);
         $this->db->update('attraction', $data);
     }
     
-    function deleteAttraction($id){
+    public function deleteAttraction($id){
         $this->db->where('aid', $id);
         $this->db->delete('attraction');
     }

@@ -6,9 +6,10 @@
 <body>
         <h1>Select Your Position</h1>
         <ul>
-            <li><?php echo anchor('welcome/setAdmin', 'Admin'); ?></li>
-            <li><?php echo anchor('welcome/setTick', 'Ticket Seller'); ?></li>
-            <li><?php echo anchor('welcome/setStaff', 'Staff'); ?></li>
+            <li><?php echo anchor('set_role/setadmin', 'Admin'); ?></li>
+            <li><?php echo anchor('set_role/settick', 'Ticket Seller'); ?></li>
+            <li><?php echo anchor('set_role/setstaff', 'Staff'); ?></li>
+            <li><?php echo anchor('set_role/station', 'Station'); ?></li>
         </ul>
 
 </body>

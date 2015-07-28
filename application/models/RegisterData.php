@@ -14,7 +14,8 @@ class RegisterData extends CI_Model{
     public function getLastInserted() {
         $this->db->select('uid');
         $this->db->from('getuid');
-        $this->db->where('id',$this->db->insert_id());
-        return $this->db->get()->row()->uid;
+        $query = $this->db->get();
+        $result = $query->last_row();
+        return $result;
     }
 }

@@ -53,3 +53,5 @@ $route['default_controller'] = 'select_role';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['adduid/(:any)'] = 'post_uid/postuid/$1';
+$route['enter/(:any)'] = 'post_gate/entergate/$1';
+$route['exit/(:any)'] = 'post_gate/exitgate/$1';

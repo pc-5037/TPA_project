@@ -9,9 +9,11 @@
         <table>
             <tr>
                 <th>ID</th>
+                <th>UID</th>
                 <th>Name</th>
                 <th>E-mail</th>
                 <th>Tel.</th>
+                <th>Status</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
@@ -19,6 +21,9 @@
             <tr>
                 <td>
                <?php echo $guest->gid;?>
+                </td>
+                <td>
+               <?php echo $guest->guid;?>
                 </td>
                 <td>
                <?php echo $guest->gname;?>
@@ -30,7 +35,10 @@
                <?php echo $guest->gtel; ?>
                 </td>
                 <td>
-               <a href="<?php echo base_url() . "index.php/edit_attraction/show_detail_form/" . $guest->gid; ?>">
+               <?php echo $guest->status ? 'true' : 'false'; ?>
+                </td>
+                <td>
+               <a href="<?php echo base_url() . "index.php/edit_guest/show_detail_form/" . $guest->gid; ?>">
                 <button>Edit</button></a>
 <!--                    anchor to edit ctrl-->
                 </td>

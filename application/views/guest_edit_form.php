@@ -13,9 +13,9 @@
 <input type="text" id="hide" name="guid" value="<?php echo $guest->guid; ?>" readonly="readonly"><br>
 <label>Name :</label>
 <input type="text" name="gname" value="<?php echo $guest->gname; ?>"><br>
-<label>Description :</label>
-<input type="email" name="gmail" value="<?php echo $guest->gmai; ?>"><br>
-<label>Height Limit :</label>
+<label>Email :</label>
+<input type="email" name="gmail" value="<?php echo $guest->gmail; ?>"><br>
+<label>Mobile No. :</label>
 <input type="tel" name="gtel" value="<?php echo $guest->gtel; ?>"><br>
 <input type="submit" id="submit" name="dsubmit" value="Update">
 </form>

@@ -8,7 +8,7 @@ class edit_guest extends CI_Controller{
     function show_detail_form(){
         $id = $this->uri->segment(3);
         $data['guest_list']  = $this->guest->getGuests();  
-        $data['a_guest'] = $this->guesy->getGuest($id);
+        $data['a_guest'] = $this->guest->getGuest($id);
         $this->load->view('guest_edit_form',$data);
     }
     

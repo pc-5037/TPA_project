@@ -9,7 +9,7 @@ class delete_guest extends CI_Controller{
     function delete(){
         $id = $this->uri->segment(3);
         $this->guest->deleteGuest($id);
-        $this->load->show_guest();
+        redirect('/show_guest');
     }
 }
 

@@ -9,4 +9,7 @@ class post_uid extends CI_Controller{
     function postuid($id){
         $this->RegisterData->insertUid($id);
     }
+    function postloginuid($id){
+        $this->RegisterData->insertUid($id);
+    }
 }
